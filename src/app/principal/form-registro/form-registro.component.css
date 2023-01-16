@@ -1,0 +1,95 @@
+.sectionGeneral{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.sectionTitulo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.sectionForm{
+    border: 1px solid;
+    border-color: rgb(4, 171, 255);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 50vw;
+}
+
+h1{
+    padding: 1rem;
+}
+
+.form-group{
+    align-items: center;
+    justify-content: center;
+    display: block;
+    flex: wrap;
+    padding-bottom: 1rem;
+
+}
+
+.form-input{
+    border-radius: none;
+    width: 100%;
+}
+
+label{
+    padding-right: 2rem;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.alertaInput{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex: wrap;
+
+    height: 3rem;
+}
+
+textarea{
+    height: 100px;
+    width: 100%;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.sectionSubmit{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+    padding-top: 1rem;
+}
+
+.mensaje{
+    height: 2rem;
+    font-weight: bolder;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: rgb(63, 126, 0);
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.textoDelMensaje{
+    text-align: center;
+    width: 100%;
+    background-color: chartreuse;
+}

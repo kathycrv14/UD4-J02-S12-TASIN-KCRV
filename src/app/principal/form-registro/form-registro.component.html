@@ -1,0 +1,116 @@
+<section class="sectionGeneral">
+    <section class="sectionForm">
+        <section class="sectionTitulo">
+            <h1>Formulario de Contacto</h1>
+        </section>
+        
+        <section class="container-sm">
+            <!--FORM-->
+            
+            <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+
+                <!-- MENSAJE FINAL -->
+                <section name="" id="" class="form-group mensaje" name="mensaje">
+                    <p class="textoDelMensaje">{{ mensaje }}</p>
+                </section>
+                <!--***-->
+
+                <!-- NOMBRE -->
+                <section class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <section>
+                        <input type="text" class="form-input" formControlName="nombres" required pattern="[a-zA-Z]+" maxlength="{a-z}">
+                        <section *ngIf="nombres?.invalid && (nombres?.dirty || nombres?.touched)" class="">
+                            <section *ngIf="nombres?.errors?.['required']" class="alert alert-danger alertaInput">
+                                <p>El nombre es obligatorio</p>
+                            </section>
+                            <section *ngIf="nombres?.errors?.['pattern']" class="alert alert-warning alertaInput">
+                                <p>El nombre debe ser solo letras</p>
+                            </section>
+                        </section>                        
+                    </section>
+                </section>
+
+                <!--*****-->
+
+                <!-- EMAIL -->
+                <section class="form-group">
+                    <label for="email">Email:</label>
+                    <section>
+                        <input type="email" class="form-input" formControlName="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                        <section *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="">
+                            <section *ngIf="email?.errors?.['required']" class="alert alert-danger alertaInput">
+                                <p>El email es obligatorio</p>
+                            </section>
+                            <section *ngIf="email?.errors?.['pattern']" class="alert alert-warning alertaInput">
+                                <p>No es valido el email</p>
+                            </section>
+                        </section>                        
+                    </section>
+                </section>
+                <!--*****-->
+
+                <!-- TELEFONO -->
+                <section class="form-group">
+                    <label for="telefono">Telefono:</label>
+                    <section>
+                        <input type="text" class="form-input" formControlName="telefono" required pattern="[0-9]{9}" maxlength="9">
+                        <section *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="">
+                            <section *ngIf="telefono?.errors?.['required']" class="alert alert-danger alertaInput">
+                                <p>El telefono es obligatorio</p>
+                            </section>
+                            <section *ngIf="telefono?.errors?.['pattern']" class="alert alert-warning alertaInput">
+                                <p>El telefono debe ser solo numero de 9 digitos</p>
+                            </section>
+                        </section>                        
+                    </section>
+                </section>
+                <!--*****-->
+
+                <!-- ASUNTO -->
+                <section class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <section>
+                        <input type="text" class="form-input" formControlName="asunto" required pattern="[a-zA-Z]+" maxlength="{a-z}">
+                        <section *ngIf="asunto?.invalid && (asunto?.dirty || asunto?.touched)" class="">
+                            <section *ngIf="asunto?.errors?.['required']" class="alert alert-danger alertaInput">
+                                <p>El asunto es obligatorio</p>
+                            </section>
+                            <section *ngIf="asunto?.errors?.['pattern']" class="alert alert-warning alertaInput">
+                                <p>El asunto debe ser solo letras</p>
+                            </section>
+                        </section>                        
+                    </section>
+                </section>
+                <!--*****-->
+
+                <!-- MENSAJE -->
+                <section class="form-group">
+                    <label for="txtMensaje">Mensaje:</label>
+                    <section>
+                        <textarea rows="" cols="" class="form-input" formControlName="txtMensaje" required pattern="[a-zA-Z]+" maxlength="{a-z}">
+                        </textarea>
+                        <section *ngIf="txtMensaje?.invalid && (txtMensaje?.dirty || txtMensaje?.touched)" class="">
+                            <section *ngIf="txtMensaje?.errors?.['required']" class="alert alert-danger alertaInput">
+                                <p>El mensaje es obligatorio</p>
+                            </section>
+                            <section *ngIf="txtMensaje?.errors?.['pattern']" class="alert alert-warning alertaInput">
+                                <p>El mensaje debe ser solo letras</p>
+                            </section>
+                        </section>                        
+                    </section>
+                </section>
+                <!--*****-->
+
+                <!-- BOTONES -->
+                <section class="sectionSubmit">
+                    <input type="submit" value="Submit" class="btn btn-primary text-white" [disabled]="!registroForm.valid">
+                    <input type="button" value="Refrescar" class="btn btn-success" (click)="Refrescar()">
+                </section>
+
+            </form>
+        </section>
+    </section>
+</section>
+
+
